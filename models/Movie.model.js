@@ -1,12 +1,12 @@
-const { Schema, model } = require('mongoose');
-const movieSchema = new Schema({
-    title: String,
-    director: String,
-    stars: Array,
-    image: String,
-    description: String,
-    showtimes: Array
-}, { timestamps: true });
+const { Schema, model } = require("mongoose");
 
-const Movie = model('Movie', movieSchema);
-module.exports = Movie;
+const movieSchema = new Schema({
+  title: String,
+  director: String,
+  stars: [String],
+  image: String,
+  description: String,
+  showtimes: [String],
+});
+
+module.exports = model("movie", movieSchema);
